@@ -128,8 +128,18 @@ main{
 
 @media (max-width: 600px){
 
+    body{
+        width: 100%;
+        height: 100vh;
+    }
+
+    .img-logo{
+        margin: 20px !important;
+
+    }
+
     .right-login{
         width: 550px !important;
-        margin: -130px;
+        margin: -100px;
     }
 }
