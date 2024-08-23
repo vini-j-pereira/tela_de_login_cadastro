@@ -6,7 +6,7 @@ async function criarConta() {
     const data = {
         email: email,
         user: user,
-        passworld: passworld
+        password: password
     };
 
     try {
