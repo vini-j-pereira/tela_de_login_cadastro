@@ -142,5 +142,6 @@ main{
         width: 550px !important;
         margin: -100px;
         height: 80vh;
+        margin: 0 !important;
     }
 }
