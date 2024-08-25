@@ -12,6 +12,7 @@ body{
 }
 
 main{
+    width: 100%;
     padding: 20px;
     position: fixed;
     z-index: 1;
@@ -164,4 +165,82 @@ main{
 #sidebar.open-sidebar .side-item a{
     justify-content: flex-start;
     gap: 14px;
+}
+
+main .menu-title h1{
+    color: #fafafa;
+    border-bottom: 2px solid #514869;
+    width: 160px;
+}
+
+main .menu-title h1 span{
+    color: #00ff88;
+}
+
+.overview{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.statistics-box{
+    margin-top: 12px;
+    width: 350px;
+    background-color: #f0ffff94;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px -12px #000000;
+}
+
+.header-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-box h2{
+    color: #514869;
+}
+
+.header-box p{
+    color: #fafafa;
+    background-color: #514869;
+    padding: 6px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.header-box p i{
+    font-weight: 600;
+}
+
+.tab-box h3{
+    color: #fafafa;
+}
+
+.tab-box-res{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.tab-box-res{
+    color: #201b2c;
+    font-weight: 500;
+}
+
+.tab-box-res p:not(:last-child){
+    border-bottom: 1px solid #fafafa;
+    width: 100%;
+}
+
+
+
+@media (max-width: 600px){
+
+    .statistics-box{
+        width: 270px;
+    }
+
 }
