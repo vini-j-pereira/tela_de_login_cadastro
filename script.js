@@ -1,11 +1,11 @@
 async function criarConta() {
     const email = document.querySelector('input[name="email"]').value;
-    const user = document.querySelector('input[name="usuario"]').value;
+    const user = document.querySelector('input[name="telefone"]').value;
     const password = document.querySelector('input[name="senha"]').value;
 
     const data = {
         email: email,
-        user: user,
+        telefone: telefone,
         password: password
     };
 
