@@ -1,12 +1,38 @@
-function logar(){
+async function login() {
+    //Capturando os dados do formulário
 
-    var login = document.getElementById('login').value;
-    var pass = document.getElementById('pass').value;
+    const email = document.querySelector('input[name="email"]').value;
+    const password = document.querySelector('input[name="password"]').value;
+
+    const data = {
+        email: email,
+        password: password,
+    };
+
+    try {
+        const response = await fetch('http://localhost:3000/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/jason'
+
+            },
+            body: JSON.stringify(data)
+        });
+
+        if(response.ok) {
+            alert('Login bem-sucedido');
+            //Redirecionar para o perfil do usuario
+            window.location.href = "profile.html";
+
+        } else {
+            const errorMessage = await response.text();
+            alert(`Erro: ${errorMessage}`);
+            
+        }
     
-    if(login == 'vinicius' && pass == '123'){
-        location.href = "profile.html";
-
-    }else{
-        alert('ERRO!')
+        } catch (error) {
+            console.error('Erro:', error);
+            alert('Erro ao realizar login');
+        }
     }
-}
+    
