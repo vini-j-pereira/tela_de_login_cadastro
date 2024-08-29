@@ -1,12 +1,9 @@
 async function login() {
     //Capturando os dados do formulário
 
-    const email = document.querySelector('input[name="email"]').value;
-    const password = document.querySelector('input[name="password"]').value;
-
     const data = {
-        email: email,
-        password: password,
+        email: document.getElementById('email').value,
+        password: document.getElementById('password').value 
     };
 
     try {
@@ -16,7 +13,7 @@ async function login() {
                 'Content-Type': 'application/jason'
 
             },
-            body: JSON.stringify({ email, password}),
+            body: JSON.stringify(data),
         });
 
         if(response.ok) {
