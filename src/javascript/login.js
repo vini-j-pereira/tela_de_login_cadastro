@@ -10,13 +10,13 @@ async function login() {
     };
 
     try {
-        const response = await fetch('http://localhost:3000/', {
+        const response = await fetch('http://localhost:3000/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/jason'
 
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify({ email, password}),
         });
 
         if(response.ok) {
